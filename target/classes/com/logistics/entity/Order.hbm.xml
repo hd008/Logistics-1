@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.logistics.entity.Order" table="order" schema="logistics">
+        <id name="id">
+            <column name="id" sql-type="tinyint(4)"/>
+        </id>
+        <property name="orderNum">
+            <column name="order_num" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="received">
+            <column name="received" sql-type="tinyint(1)"/>
+        </property>
+        <property name="endPositioin">
+            <column name="end_positioin" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="startPosition">
+            <column name="start_position" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="curPosition">
+            <column name="cur_position" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="describe">
+            <column name="describe" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
